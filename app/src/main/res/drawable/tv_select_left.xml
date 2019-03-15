@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 被选中时 -->
+    <item android:drawable="@drawable/btn_blue_bord_shape_left_select" android:state_selected="true" />
+    <!--不被选中时-->
+    <item android:drawable="@drawable/btn_blue_bord_shape_left" android:state_selected="false" />
+    <!-- 默认时 -->
+    <item android:drawable="@drawable/btn_blue_bord_shape_left" />
+</selector>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.saiyi.oldmanwatch">
+
+
+    <permission
+        android:name="com.saiyi.oldmanwatch.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.saiyi.oldmanwatch.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 允许程序读取通讯录权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于读取手机当前的状态-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入对象存储BOS数据-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 用于加快GPS首次定位-->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!-- 用于Android M及以上系统，申请加入忽略电池优化白名单-->
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-feature android:name="android.hardware.camera" />
+    <!--相机权限-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!--读取SD卡的权限:打开相册选取图片所必须的权限-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 用于开启 debug 版本的应用在6.0 系统上 层叠窗口权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+
+    <application
+        android:name=".base.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".module.main.StartActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".module.user.activity.SelectCycleActivity" />
+        <activity android:name=".module.user.activity.CreateDrugRemindingActivity" />
+        <activity android:name=".module.user.activity.DrugRemindingActivity" />
+        <activity android:name=".module.home.activity.TelephoneBookActivity" />
+        <activity android:name=".module.main.MainActivity" />
+        <activity android:name=".module.main.RelationActivity" />
+        <activity android:name=".module.main.RegisterActivity" />
+        <activity android:name=".module.main.LoginActivity" />
+        <activity android:name=".module.main.BindingDeviceActivity" />
+        <activity android:name=".module.user.activity.ReSetPwdActivity" />
+        <activity android:name=".module.home.activity.NoticeActivity" />
+        <activity android:name=".module.user.activity.MyWatchActivity" />
+        <activity android:name=".module.main.ApplyBindActivity" />
+        <activity android:name=".module.user.activity.FeedbackActivity" />
+        <activity android:name=".module.health.activity.HistoryActivity" />
+        <activity android:name=".module.user.activity.AboutUsActivity" />
+        <activity android:name=".module.user.activity.ClockActivity" />
+        <activity android:name=".module.user.activity.CreateClockActivity" />
+        <activity android:name=".module.user.activity.DisturbActivity" />
+        <activity android:name=".module.user.activity.SMSSettingActivity" />
+        <activity android:name=".module.user.activity.ModelSetActivity" />
+        <activity android:name=".module.user.activity.SosActivity" />
+        <activity android:name=".module.user.activity.FamilyMemberActivity" />
+        <activity android:name=".module.health.activity.SelectFamilyActivity" />
+        <activity android:name=".module.health.activity.HealthReportActivity" />
+        <activity android:name=".module.map.activity.TrajectoryActivity" />
+        <activity android:name=".module.map.activity.EnclosureActivity" />
+        <activity android:name=".module.map.activity.CreateEnclosureActivity" />
+        <activity android:name=".module.main.PositionerMainActivity" />
+        <activity android:name=".module.map.activity.PositionStepActivity" />
+        <activity android:name=".module.user.activity.MyPositionActivity" />
+        <activity android:name=".module.main.BoundResultActivity" />
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="0NIbR7ByPxRDfKFH8RATFhFRWYmbozcG" />
+        <!--FileProvider共享文件、缓存-->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+        <provider
+            android:name="cn.jpush.android.service.DataProvider"
+            android:authorities="com.saiyi.oldmanwatch.DataProvider"
+            android:exported="true"
+            tools:replace="android:exported" />
+        <!-- Required SDK 核心功能-->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
+                <category android:name="com.saiyi.oldmanwatch" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required SDK 核心功能-->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.saiyi.oldmanwatch" />
+            </intent-filter>
+        </activity>
+        <!-- SDK 核心功能-->
+        <activity
+            android:name="cn.jpush.android.ui.PopWinActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@style/MyDialogStyle">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.saiyi.oldmanwatch" />
+            </intent-filter>
+        </activity>
+
+        <!-- Required SDK 核心功能-->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false"></service>
+
+        <!-- Required SDK 核心功能-->
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver" />
+
+        <!-- Required since 3.0.7 -->
+        <!-- 新的 tag/alias 接口结果返回需要开发者配置一个自定的广播 -->
+        <!-- 该广播需要继承 JPush 提供的 JPushMessageReceiver 类, 并如下新增一个 Intent-Filter -->
+        <receiver
+            android:name=".receiver.MyJPushMessageReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+                <category android:name="com.saiyi.oldmanwatch" />
+            </intent-filter>
+        </receiver>
+
+        <!-- User defined. 用户自定义的广播接收器-->
+        <receiver
+            android:name=".receiver.MyReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <!--Required 用户注册 SDK 的 intent-->
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <!--Required 用户接收 SDK 消息的 intent-->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <!--Required 用户接收 SDK 通知栏信息的 intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <!--Required 用户打开自定义通知栏的 intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+                <category android:name="com.saiyi.oldmanwatch" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required. For publish channel feature -->
+        <!-- JPUSH_CHANNEL 是为了方便开发者统计 APK 分发渠道。-->
+        <!-- 例如: -->
+        <!-- 发到 Google Play 的 APK 可以设置为 google-play; -->
+        <!-- 发到其他市场的 APK 可以设置为 xxx-market。 -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <!-- Required. AppKey copied from Portal -->
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="5cfa275878b8ea93d0ba10a1" />
+
+
+        <!-- 微信分享 -->
+        <activity
+            android:name=".module.main.WXEntryActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Fullscreen.Translucent" />
+        <activity android:name=".module.health.activity.TestingActivity" />
+        <activity
+            android:name=".module.user.activity.PerfectPersonalAvtivity"
+            android:exported="true" />
+        <activity android:name=".module.main.ScalesActivity" />
+        <activity android:name=".module.main.DeviceTypeActivity" />
+        <activity android:name=".module.main.BindAndUnBindActivity" />
+        <activity android:name=".module.scale.AddUserActivity" />
+        <activity android:name=".module.scale.ScanInfoActivity" />
+        <activity android:name=".module.scale.UserMangerActivity" />
+        <activity android:name=".module.scale.DevicesInfoActivity" />
+        <activity android:name=".module.main.MainTitleActivity" />
+        <activity android:name=".module.health.fragment.TrendDeviceDetails" />
+        <activity android:name=".module.scale.UserScanDetails" />
+        <activity android:name=".module.scale.JiGuangActivity" />
+
+    </application>
+
+
+</manifest>

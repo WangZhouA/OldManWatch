@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_day"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="-2dp"
+            android:layout_weight="1"
+            android:background="@drawable/tv_select_left"
+            android:gravity="center"
+            android:text="@string/day" />
+
+        <TextView
+            android:id="@+id/tv_month"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tv_select"
+            android:gravity="center"
+            android:text="@string/month" />
+
+        <TextView
+            android:id="@+id/tv_year"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="-2dp"
+            android:layout_weight="1"
+            android:background="@drawable/tv_select_right"
+            android:gravity="center"
+            android:text="@string/year" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/appWhite"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_left"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/left" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2018-08-28"
+                android:textColor="@color/txt_color"
+                android:textSize="18dp" />
+
+            <ImageView
+                android:id="@+id/iv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:src="@mipmap/date" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_right"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/right" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/lineChart"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <com.saiyi.oldmanwatch.view.MyFatItemView
+                android:id="@+id/mfiv_muscle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2" />
+
+            <com.saiyi.oldmanwatch.view.MyFatItemView
+                android:id="@+id/mfiv_impedance_data"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4" />
+
+            <com.saiyi.oldmanwatch.view.MyFatItemView
+                android:id="@+id/mfiv_water_content"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <com.saiyi.oldmanwatch.view.MyFatItemView
+                android:id="@+id/mfiv_bone_mass"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2" />
+
+            <com.saiyi.oldmanwatch.view.MyFatItemView
+                android:id="@+id/mfiv_visceral_fat"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4" />
+
+            <com.saiyi.oldmanwatch.view.MyFatItemView
+                android:id="@+id/mfiv_protein"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <com.saiyi.oldmanwatch.view.MyFatItemView
+                android:id="@+id/mfiv_body_fat"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2" />
+
+            <com.saiyi.oldmanwatch.view.MyFatItemView
+                android:id="@+id/mfiv_basal_metabolism"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4" />
+
+            <com.saiyi.oldmanwatch.view.MyFatItemView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

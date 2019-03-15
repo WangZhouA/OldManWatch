@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toobars" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/px_24"
+        android:background="@color/appWhite"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/px_16">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cycle"
+            android:textColor="@color/txt_color"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/tv_cycle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableRight="@mipmap/right"
+            android:gravity="right"
+            android:text="@string/hint_please_select"
+            android:textColor="@color/hint_color"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/appWhite"
+            android:orientation="horizontal">
+
+            <com.saiyi.oldmanwatch.view.wheel.WheelView
+                android:id="@+id/wv_hour"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <com.saiyi.oldmanwatch.view.wheel.WheelView
+                android:id="@+id/wv_minute"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

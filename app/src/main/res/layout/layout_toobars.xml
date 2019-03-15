@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:background="@color/appColor"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_BarLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="@dimen/px_20"
+            android:textColor="@color/appWhite"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/tv_BarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="@color/appWhite"
+            android:textSize="20dp"
+            tools:text="标题" />
+
+
+        <TextView
+            android:id="@+id/tv_BarRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/px_20"
+            android:gravity="center"
+            android:textColor="@color/appWhite"
+            android:textSize="20dp"
+            tools:text="···" />
+    </RelativeLayout>
+</LinearLayout>

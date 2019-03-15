@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true">
+
+    <android.support.constraint.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+        <LinearLayout
+            android:id="@+id/linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/beijing_22"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_BarLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="@dimen/px_20"
+                    android:textColor="@color/appWhite"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/tv_BarTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:textColor="@color/appWhite"
+                    android:textSize="20dp"
+                    tools:text="标题" />
+
+
+                <TextView
+                    android:id="@+id/tv_BarRight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/px_20"
+                    android:gravity="center"
+                    android:textColor="@color/appWhite"
+                    android:textSize="20dp"
+                    android:visibility="gone"
+                    tools:text="···" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/p2"
+            app:layout_constraintBottom_toBottomOf="@+id/linearlayout"
+            app:layout_constraintLeft_toLeftOf="@+id/linearlayout"
+            app:layout_constraintRight_toRightOf="@+id/linearlayout"
+            app:layout_constraintTop_toTopOf="@+id/linearlayout"
+
+            />
+
+
+        <RelativeLayout
+            android:id="@+id/rl_user_manger"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="#FFF"
+            app:layout_constraintTop_toBottomOf="@+id/linearlayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingLeft="15dp"
+                android:text="用户管理"
+                android:textColor="#242424"
+                android:textSize="15dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="15dp"
+                android:src="@mipmap/bc" />
+
+        </RelativeLayout>
+
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="#CDCDCD"
+            app:layout_constraintTop_toBottomOf="@+id/rl_user_manger"></View>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/lcyview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/view"></android.support.v7.widget.RecyclerView>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_add_user"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#FFF"
+            app:layout_constraintTop_toBottomOf="@+id/lcyview">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@mipmap/personal_add"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:text="添加新成员"
+                android:textColor="#54222328"
+                android:textSize="15dp" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_bind_device"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="#FFF"
+            app:layout_constraintTop_toBottomOf="@+id/rl_add_user">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingLeft="15dp"
+                android:text="@string/bind_unBind"
+                android:textColor="#242424"
+                android:textSize="15dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="15dp"
+                android:src="@mipmap/bc" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/line_color"
+            app:layout_constraintTop_toBottomOf="@+id/rl_bind_device" />
+
+        <RelativeLayout
+            android:id="@+id/rl_device_info"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#FFF"
+            app:layout_constraintTop_toBottomOf="@+id/view2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingLeft="15dp"
+                android:text="设备信息"
+                android:textColor="#242424"
+                android:textSize="15dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingRight="15dp"
+                android:src="@mipmap/bc" />
+
+        </RelativeLayout>
+
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
+
+
+

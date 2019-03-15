@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_my_bg"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@mipmap/bg">
+
+        <com.saiyi.oldmanwatch.view.CircleImageView
+            android:id="@+id/civ_pic"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/call1" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/civ_pic"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="9dp"
+            android:textColor="@color/appWhite"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:id="@+id/iv_bianji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/bianji" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/activity_bg"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="17dp"
+                android:background="@color/appWhite"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+                android:text="@string/my_device"
+                android:textSize="13dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_device"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_add_device"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/appWhite"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:src="@mipmap/personal_add" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/add_new_device"
+                    android:textColorHint="@color/hint_color"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:visibility="invisible" />
+
+            <com.saiyi.oldmanwatch.view.MyItemView
+                android:id="@+id/miv_reset_password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/appWhite" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color" />
+
+            <com.saiyi.oldmanwatch.view.MyItemView
+                android:id="@+id/miv_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/appWhite" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/line_color" />
+
+            <TextView
+                android:id="@+id/tv_login_out"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/appWhite"
+                android:gravity="center"
+                android:text="@string/login_out"
+                android:textColor="@color/txt_color"
+                android:textSize="17dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/line_color" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</LinearLayout>

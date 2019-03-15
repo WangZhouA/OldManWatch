@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toobars" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/px_20"
+        android:layout_marginRight="@dimen/px_20"
+        android:layout_marginTop="@dimen/px_20"
+        android:fitsSystemWindows="true">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hint_feedback"
+            android:textColor="@color/txt_color"
+            android:textSize="15dp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_txt"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@id/tv_title"
+            android:layout_marginTop="@dimen/px_10"
+            android:background="@drawable/btn_gray_bord"
+            android:padding="10dp">
+
+            <EditText
+                android:id="@+id/et_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:textColor="@color/txt_color"
+                android:textSize="15dp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_txt"
+            android:layout_marginBottom="@dimen/px_10"
+            android:layout_marginTop="@dimen/px_20"
+            android:text="@string/hint_add_pic"
+            android:textColor="@color/txt_color"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:id="@+id/iv_add_pic"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:layout_below="@id/tv_txt"
+            android:src="@mipmap/feedback_add" />
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/px_64"
+            android:background="@drawable/btn_gray_shape"
+            android:gravity="center"
+            android:text="@string/confirm"
+            android:textColor="@color/appWhite"
+            android:textSize="17dp" />
+    </RelativeLayout>
+</LinearLayout>

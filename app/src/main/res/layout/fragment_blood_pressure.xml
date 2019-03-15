@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="21dp"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_history"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginRight="21dp"
+                    android:src="@mipmap/search" />
+            </LinearLayout>
+
+
+            <com.saiyi.oldmanwatch.view.DHealthyProgressView
+                android:id="@+id/simple"
+                android:layout_width="166dp"
+                android:layout_height="166dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:gravity="center"
+                custom:base_color="#50000000"
+                custom:duration="1000"
+                custom:max="100"
+                custom:min="0"
+                custom:progress_color="@color/appColor"
+                custom:progress_stroke_width="10dp">
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_bmp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_bmp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="64"
+                        android:textColor="@color/appColor"
+                        android:textSize="34dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/tv_bmp"
+                        android:text="@string/bmp"
+                        android:textColor="@color/hint_color"
+                        android:textSize="11dp" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/rl_bmp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="7dp"
+                    android:text="@string/heart_rate"
+                    android:textColor="@color/hint_color"
+                    android:textSize="11dp" />
+
+                <TextView
+                    android:id="@+id/tv_hint_test"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_bmp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="7dp"
+                    android:text="@string/last_test_data"
+                    android:textColor="@color/hint_color"
+                    android:textSize="11dp" />
+            </com.saiyi.oldmanwatch.view.DHealthyProgressView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_heart_rate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="140/75"
+                    android:textColor="@color/txt_red_color"
+                    android:textSize="34dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/hypertension_mmhg"
+                    android:textColor="@color/hint_color"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_gray_bord_shape"
+                android:orientation="vertical"
+                android:paddingBottom="15dp"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/normal_range"
+                    android:textColor="@color/txt_color"
+                    android:textSize="14dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/heart_rate"
+                        android:textColor="@color/hint_color"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/tv_heart_rate_range"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="60-100"
+                        android:textColor="@color/appColor"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/second"
+                        android:textColor="@color/hint_color"
+                        android:textSize="14dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hypertension"
+                        android:textColor="@color/hint_color"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/tv_hypertension_range"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="90-139"
+                        android:textColor="@color/appColor"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mmhg"
+                        android:textColor="@color/hint_color"
+                        android:textSize="14dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hypotension"
+                        android:textColor="@color/hint_color"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/tv_hypotension_range"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="60-80"
+                        android:textColor="@color/appColor"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mmhg"
+                        android:textColor="@color/hint_color"
+                        android:textSize="14dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_testing"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_gray_bord_fillet"
+                android:gravity="center"
+                android:text="@string/testing"
+                android:textColor="@color/hint_color"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

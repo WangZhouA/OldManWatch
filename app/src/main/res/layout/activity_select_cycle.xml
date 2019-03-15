@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toobars" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_select_cycle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/line_color" />
+
+        <LinearLayout
+            android:id="@+id/ll_reminding"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/appWhite"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/px_15"
+            android:paddingRight="@dimen/px_15">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/reminding"
+                android:textColor="@color/txt_color"
+                android:textSize="15dp" />
+
+            <ImageView
+                android:id="@+id/iv_reminding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:src="@mipmap/checkmark" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/line_color" />
+
+        <LinearLayout
+            android:id="@+id/ll_every_day"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/appWhite"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/px_15"
+            android:paddingRight="@dimen/px_15">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/every_day"
+                android:textColor="@color/txt_color"
+                android:textSize="15dp" />
+
+            <ImageView
+                android:id="@+id/iv_every_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:src="@mipmap/checkmark" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/line_color" />
+
+        <LinearLayout
+            android:id="@+id/ll_weekly"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/appWhite"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/px_15"
+            android:paddingRight="@dimen/px_15">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/weekly"
+                android:textColor="@color/txt_color"
+                android:textSize="15dp" />
+
+            <ImageView
+                android:id="@+id/iv_weekly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:src="@mipmap/checkmark" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/line_color" />
+
+        <LinearLayout
+            android:id="@+id/ll_custom"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/appWhite"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/px_15"
+            android:paddingRight="@dimen/px_15">
+
+            <TextView
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:text="@string/custom"
+                android:textColor="@color/txt_color"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tv_custom"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:maxLines="1"
+                android:textColor="@color/hint_color"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/line_color" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_custom_day"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/line_color" />
+
+        <LinearLayout
+            android:id="@+id/ll_every_sunday"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/appWhite"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/px_15"
+            android:paddingRight="@dimen/px_15">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/every_sunday"
+                android:textColor="@color/txt_color"
+                android:textSize="15dp" />
+
+            <ImageView
+                android:id="@+id/iv_every_sunday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/checkmark"
+                android:visibility="invisible"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/line_color" />
+
+        <LinearLayout
+            android:id="@+id/ll_every_monday"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/appWhite"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/px_15"
+            android:paddingRight="@dimen/px_15">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/every_monday"
+                android:textColor="@color/txt_color"
+                android:textSize="15dp" />
+
+            <ImageView
+                android:id="@+id/iv_every_monday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:src="@mipmap/checkmark" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/line_color" />
+
+        <LinearLayout
+            android:id="@+id/ll_every_tuesday"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/appWhite"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/px_15"
+            android:paddingRight="@dimen/px_15">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/every_tuesday"
+                android:textColor="@color/txt_color"
+                android:textSize="15dp" />
+
+            <ImageView
+                android:id="@+id/iv_every_tuesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:src="@mipmap/checkmark" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/line_color" />
+
+        <LinearLayout
+            android:id="@+id/ll_every_wednesday"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/appWhite"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/px_15"
+            android:paddingRight="@dimen/px_15">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/every_wednesday"
+                android:textColor="@color/txt_color"
+                android:textSize="15dp" />
+
+            <ImageView
+                android:id="@+id/iv_every_wednesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/checkmark"
+                android:visibility="invisible"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/line_color" />
+
+        <LinearLayout
+            android:id="@+id/ll_every_thursday"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/appWhite"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/px_15"
+            android:paddingRight="@dimen/px_15">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/every_thursday"
+                android:textColor="@color/txt_color"
+                android:textSize="15dp" />
+
+            <ImageView
+                android:id="@+id/iv_every_thursday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/checkmark"
+                android:visibility="invisible"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/line_color" />
+
+        <LinearLayout
+            android:id="@+id/ll_every_friday"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/appWhite"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/px_15"
+            android:paddingRight="@dimen/px_15">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/every_friday"
+                android:textColor="@color/txt_color"
+                android:textSize="15dp" />
+
+            <ImageView
+                android:id="@+id/iv_every_friday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/checkmark"
+                android:visibility="invisible"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/line_color" />
+
+        <LinearLayout
+            android:id="@+id/ll_every_saturday"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/appWhite"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/px_15"
+            android:paddingRight="@dimen/px_15">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/every_saturday"
+                android:textColor="@color/txt_color"
+                android:textSize="15dp" />
+
+            <ImageView
+                android:id="@+id/iv_every_saturday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/checkmark"
+                android:visibility="invisible"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/line_color" />
+    </LinearLayout>
+</LinearLayout>

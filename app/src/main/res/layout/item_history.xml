@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="43dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/time"
+        android:textColor="@color/hint_color"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/tv_heart_rate"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/heart_rate"
+        android:textColor="@color/hint_color"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/tv_high_pressure"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/high_pressure"
+        android:textColor="@color/hint_color"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/tv_low_pressure"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/low_pressure"
+        android:textColor="@color/hint_color"
+        android:textSize="15dp" />
+</LinearLayout>

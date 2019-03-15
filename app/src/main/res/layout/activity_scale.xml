@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <com.saiyi.oldmanwatch.view.CustomViewPager
+        android:id="@+id/main_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="1dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toTopOf="@id/ll_Navigation"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color"
+        app:layout_constraintBottom_toTopOf="@id/ll_Navigation"
+        app:layout_constraintTop_toBottomOf="@id/main_view_pager" />
+
+    <LinearLayout
+        android:id="@+id/ll_Navigation"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.saiyi.oldmanwatch.view.ImageTextView
+            android:id="@+id/itv_scale"
+            android:layout_width="0dp"
+            android:layout_height="53dp"
+            android:layout_weight="1" />
+
+        <com.saiyi.oldmanwatch.view.ImageTextView
+            android:id="@+id/itv_trend"
+            android:layout_width="0dp"
+            android:layout_height="53dp"
+            android:layout_weight="1" />
+
+        <com.saiyi.oldmanwatch.view.ImageTextView
+            android:id="@+id/itv_my"
+            android:layout_width="0dp"
+            android:layout_height="53dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

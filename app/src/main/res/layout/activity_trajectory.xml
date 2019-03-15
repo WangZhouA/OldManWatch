@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/appColor">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_BarLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:gravity="center"
+                android:paddingLeft="@dimen/px_20"
+                android:paddingRight="@dimen/px_20"
+                android:textColor="@color/appWhite"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tv_BarTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableRight="@mipmap/state_down_w"
+                android:drawablePadding="@dimen/dp_4"
+                android:gravity="center"
+                android:textColor="@color/appWhite"
+                android:textSize="20dp" />
+
+
+            <TextView
+                android:id="@+id/tv_BarRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/px_20"
+                android:gravity="center"
+                android:textColor="@color/appWhite"
+                android:textSize="20dp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/appWhite"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_playback"
+                android:layout_width="61dp"
+                android:layout_height="31dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/btn_blue_shape"
+                android:gravity="center"
+                android:text="@string/playback"
+                android:textColor="@color/appWhite"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/tv_trajectory"
+                android:layout_width="61dp"
+                android:layout_height="31dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:layout_toRightOf="@id/tv_playback"
+                android:background="@drawable/btn_gray_bord"
+                android:gravity="center"
+                android:text="@string/trajectory"
+                android:textColor="@color/hint_color"
+                android:textSize="14dp" />
+
+            <CheckBox
+                android:id="@+id/cb_switch"
+                style="@style/MySetSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:clickable="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:layout_toLeftOf="@id/cb_switch"
+                android:text="@string/base_station"
+                android:textColor="@color/txt_color"
+                android:textSize="14dp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_time_left"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:hint="@string/hint_start_time"
+                android:textColor="@color/txt_color"
+                android:textColorHint="@color/hint_color"
+                android:textSize="14dp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="26dp"
+                android:layout_gravity="center"
+                android:background="@color/line_color" />
+
+            <TextView
+                android:id="@+id/tv_time_right"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:hint="@string/hint_end_time"
+                android:textColor="@color/txt_color"
+                android:textColorHint="@color/hint_color"
+                android:textSize="14dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/trajectory_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

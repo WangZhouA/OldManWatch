@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/dropw"
+        android:orientation="vertical"
+        >
+
+
+        <TextView
+            android:paddingTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor="#242424"
+            android:text="切换设备"
+            android:paddingLeft="10dp"
+            android:paddingBottom="5dp"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            ></android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/tv_dingweiqi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/locator"
+            android:textSize="15dp"
+            android:textColor="#242424"
+            android:text="定位器"
+            android:gravity="center"
+            android:drawablePadding="10dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+           android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/tv_watch"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/watch"
+            android:textSize="15dp"
+            android:textColor="#242424"
+            android:text="老人手表"
+            android:gravity="center"
+            android:drawablePadding="10dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:visibility="gone"
+
+            />
+        <TextView
+            android:id="@+id/tv_sacle"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/scale"
+            android:textSize="15dp"
+            android:textColor="#242424"
+            android:text="电子秤"
+            android:gravity="center"
+            android:drawablePadding="10dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

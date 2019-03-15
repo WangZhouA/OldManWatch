@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+ <android.support.constraint.ConstraintLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:background="#FFF"
+     android:paddingBottom="40dp"
+     >
+
+
+ <ImageView
+     android:id="@+id/imClose"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:src="@mipmap/close"
+     android:layout_marginTop="30dp"
+     app:layout_constraintRight_toRightOf="parent"
+     app:layout_constraintLeft_toLeftOf="parent"
+     app:layout_constraintHorizontal_bias="0.05"
+     app:layout_constraintTop_toTopOf="parent"
+     />
+
+
+
+
+ <TextView
+     android:id="@+id/tv_weight_num"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:text=""
+     android:textSize="50dp"
+     android:textColor="#242424"
+     app:layout_constraintTop_toTopOf="parent"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintRight_toRightOf="parent"
+     app:layout_constraintLeft_toLeftOf="parent"
+     app:layout_constraintVertical_bias="0.2"
+
+     />
+
+ <TextView
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:text="斤"
+     android:textSize="15dp"
+     android:textColor="#242424"
+     app:layout_constraintBottom_toBottomOf="@+id/tv_weight_num"
+     android:layout_marginBottom="10dp"
+     app:layout_constraintLeft_toRightOf="@+id/tv_weight_num"
+
+     />
+
+ <RelativeLayout
+     android:id="@+id/rl"
+     android:layout_marginTop="10dp"
+     android:layout_width="0dp"
+     android:layout_height="70dp"
+     android:background="@mipmap/bg2"
+     app:layout_constraintTop_toBottomOf="@+id/tv_weight_num"
+     app:layout_constraintLeft_toLeftOf="parent"
+     app:layout_constraintRight_toRightOf="parent"
+     android:layout_marginLeft="30dp"
+     android:layout_marginRight="30dp"
+
+     >
+
+   <com.saiyi.oldmanwatch.view.CircleImageView
+       android:id="@+id/imPic"
+       android:layout_width="35dp"
+       android:layout_height="35dp"
+       android:src="@mipmap/head_portrait"
+       android:layout_centerVertical="true"
+       android:layout_marginLeft="20dp"
+
+       />
+
+
+  <TextView
+      android:id="@+id/tvName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="15dp"
+      android:text="是我本人"
+      android:layout_toRightOf="@+id/imPic"
+      android:layout_centerVertical="true"
+      android:layout_marginLeft="10dp"
+      />
+
+  <ImageView
+      android:id="@+id/iv_Sector"
+      android:layout_width="50dp"
+      android:layout_height="50dp"
+      android:src="@drawable/checkbox"
+      android:layout_alignParentRight="true"
+      android:layout_centerVertical="true"
+
+      />
+
+
+
+ </RelativeLayout>
+
+
+ <android.support.v7.widget.RecyclerView
+     android:id="@+id/Myrecy"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     app:layout_constraintTop_toBottomOf="@+id/rl"
+     android:layout_marginTop="10dp"
+     ></android.support.v7.widget.RecyclerView>
+
+
+
+
+
+ <TextView
+     android:id="@+id/tvAddUser"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:drawableLeft="@mipmap/personal_add"
+     android:text="添加新成员"
+     android:gravity="center"
+     android:drawablePadding="10dp"
+     app:layout_constraintTop_toBottomOf="@+id/Myrecy"
+     app:layout_constraintLeft_toLeftOf="parent"
+     app:layout_constraintRight_toRightOf="parent"
+     android:layout_marginTop="20dp"
+
+     />
+
+  <TextView
+
+      android:id="@+id/tv_confirm"
+      android:layout_width="match_parent"
+      android:layout_height="48dp"
+      android:layout_marginLeft="30dp"
+      android:layout_marginRight="30dp"
+      android:background="@drawable/btn_blue_shape"
+      android:gravity="center"
+      android:text="@string/confirm"
+      android:textColor="@color/appWhite"
+      android:textSize="17dp"
+      android:layout_marginBottom="30dp"
+      app:layout_constraintTop_toBottomOf="@+id/tvAddUser"
+      android:layout_marginTop="30dp"
+
+      />
+
+
+
+
+ </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

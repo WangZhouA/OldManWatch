@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appColor"
+    android:fitsSystemWindows="true">
+
+    <ImageView
+        android:id="@+id/img_back"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginLeft="@dimen/px_20"
+        android:layout_marginTop="30dp"
+        android:src="@mipmap/back" />
+
+
+    <TextView
+        android:id="@+id/tv_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/hint_bind_success"
+        android:textColor="@color/appWhite"
+        android:textSize="15dp" />
+
+    <ImageView
+        android:id="@+id/iv_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tv_hint"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:src="@mipmap/prompt1" />
+
+    <TextView
+        android:id="@+id/tv_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/px_30"
+        android:layout_marginRight="@dimen/px_30"
+        android:layout_marginBottom="44dp"
+        android:background="@drawable/txt_gray_bord"
+        android:gravity="center"
+        android:text="@string/start_to_use"
+        android:textColor="@color/appWhite"
+        android:textSize="17dp" />
+</RelativeLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+
+    <include layout="@layout/layout_toobars" />
+
+
+    <TextView
+        android:id="@+id/title_Top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/scanning_bind"
+        android:textSize="@dimen/px_40"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_toolbar"
+
+        />
+
+
+    <ImageView
+        android:id="@+id/iv_scan"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_Top"
+
+        />
+
+
+    <TextView
+        android:id="@+id/title_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/device_ime"
+        android:textSize="@dimen/px_40"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_scan" />
+
+
+    <TextView
+        android:id="@+id/tv_people"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/ll_emember"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/btn_blue_shape"
+        android:gravity="center"
+        android:text="@string/people_list"
+        android:textColor="@color/appWhite"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tv_unBind"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintWidth_percent="0.9" />
+
+
+    <TextView
+        android:id="@+id/tv_unBind"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/ll_emember"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btn_blue_shape"
+        android:gravity="center"
+        android:text="@string/unbind_device"
+        android:textColor="@color/appWhite"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_center"
+        app:layout_constraintVertical_bias="0.6"
+        app:layout_constraintWidth_percent="0.9" />
+
+</android.support.constraint.ConstraintLayout>

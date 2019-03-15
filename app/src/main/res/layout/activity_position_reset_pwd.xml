@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_position_toobars" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/px_30"
+        android:layout_marginRight="@dimen/px_30"
+        android:layout_marginTop="@dimen/px_100">
+
+        <TextView
+            android:id="@+id/tv_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/account"
+            android:textColor="@color/txt_gray_color"
+            android:textSize="15dp" />
+
+        <LinearLayout
+            android:id="@+id/ll_account_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_account"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="@string/hint_input_account"
+                android:textColor="@color/txt_color"
+                android:textColorHint="@color/hint_color"
+                android:textSize="15dp" />
+
+            <ImageView
+                android:id="@+id/img_account_del"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/tv_account_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/ll_account_edit"
+            android:background="@color/line_color" />
+
+        <TextView
+            android:id="@+id/tv_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_account_line"
+            android:layout_marginTop="20dp"
+            android:text="@string/code"
+            android:textColor="@color/txt_gray_color"
+            android:textSize="15dp" />
+
+        <LinearLayout
+            android:id="@+id/ll_code_deit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_code"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_code"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/hint_input_get_code"
+                android:textColor="@color/txt_color"
+                android:textColorHint="@color/hint_color"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tv_get_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/get_code"
+                android:textColor="@color/txt_color"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/tv_code_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/ll_code_deit"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/line_color" />
+
+        <TextView
+            android:id="@+id/tv_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_code_line"
+            android:text="@string/pass"
+            android:textColor="@color/txt_gray_color"
+            android:textSize="15dp" />
+
+        <LinearLayout
+            android:id="@+id/ll_pass_deit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_pass"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="@string/hint_input_password"
+                android:textColor="@color/txt_color"
+                android:textColorHint="@color/hint_color"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/tv_pass_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/ll_pass_deit"
+            android:layout_marginBottom="20dp"
+            android:background="@color/line_color" />
+
+        <TextView
+            android:id="@+id/tv_pass_again"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_pass_line"
+            android:text="@string/confirm_pwd"
+            android:textColor="@color/txt_gray_color"
+            android:textSize="15dp" />
+
+        <LinearLayout
+            android:id="@+id/ll_pass_deit_again"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_pass_again"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_pass_again"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="@string/hint_input_password"
+                android:textColor="@color/txt_color"
+                android:textColorHint="@color/hint_color"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/ll_pass_deit_again"
+            android:layout_marginBottom="20dp"
+            android:background="@color/line_color" />
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="64dp"
+            android:background="@drawable/btn_gray_shape"
+            android:gravity="center"
+            android:text="@string/confirm"
+            android:textColor="@color/appWhite"
+            android:textSize="17dp" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

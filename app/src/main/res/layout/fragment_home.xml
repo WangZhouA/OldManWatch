@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/home_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:background="@color/appColor"
+        android:orientation="horizontal">
+
+        <com.saiyi.oldmanwatch.view.CircleImageView
+            android:id="@+id/civ_pic"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="@dimen/dp_10"
+            android:src="@mipmap/devices_watch" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/appWhite"
+                android:textSize="15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:gravity="center_vertical|center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/px_10"
+                    android:text="100%"
+                    android:textColor="@color/appWhite"
+                    android:textSize="11dp" />
+
+                <ImageView
+                    android:id="@+id/iv_quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/electricity1" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_add"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/add" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_marginTop="54dp"
+        android:orientation="horizontal">
+
+        <com.saiyi.oldmanwatch.view.ImageTextView
+            android:id="@+id/itv_small_talk"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.saiyi.oldmanwatch.view.ImageTextView
+            android:id="@+id/itv_notice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.saiyi.oldmanwatch.view.ImageTextView
+            android:id="@+id/itv_conversation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.saiyi.oldmanwatch.view.ImageTextView
+            android:id="@+id/itv_telephone_book"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_step"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/btn_gray_bord_shape"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <ImageView
+            android:id="@+id/iv_step_number"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/home_count" />
+
+        <TextView
+            android:id="@+id/tv_step_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_15"
+            android:layout_marginTop="13dp"
+            android:layout_toRightOf="@id/iv_step_number"
+            android:text="@string/step_number"
+            android:textColor="@color/txt_color"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/tv_step_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_15"
+            android:layout_marginTop="37dp"
+            android:layout_toRightOf="@id/iv_step_number"
+            android:text=""
+            android:textColor="@color/hint_color"
+            android:textSize="11dp" />
+
+        <TextView
+            android:id="@+id/tv_step"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/step"
+            android:textColor="@color/hint_color"
+            android:textSize="11dp" />
+
+        <TextView
+            android:id="@+id/tv_step_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/tv_step"
+            android:text="0"
+            android:textColor="@color/txt_color"
+            android:textSize="24dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_heart_rate"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/btn_gray_bord_shape"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <ImageView
+            android:id="@+id/iv_heart_rate"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/home_heart" />
+
+        <TextView
+            android:id="@+id/tv_heart_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_15"
+            android:layout_marginTop="13dp"
+            android:layout_toRightOf="@id/iv_heart_rate"
+            android:text="@string/heart_rate"
+            android:textColor="@color/txt_color"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/tv_heart_rate_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_15"
+            android:layout_marginTop="37dp"
+            android:layout_toRightOf="@id/iv_heart_rate"
+            android:text=""
+            android:textColor="@color/hint_color"
+            android:textSize="11dp" />
+
+        <TextView
+            android:id="@+id/tv_second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/second"
+            android:textColor="@color/hint_color"
+            android:textSize="11dp" />
+
+        <TextView
+            android:id="@+id/tv_heart_rate_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/tv_second"
+            android:text="0"
+            android:textColor="@color/txt_color"
+            android:textSize="24dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_blood_pressure"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/btn_gray_bord_shape"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <ImageView
+            android:id="@+id/iv_blood_pressure"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/home_pressure" />
+
+        <TextView
+            android:id="@+id/tv_blood_pressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_15"
+            android:layout_marginTop="13dp"
+            android:layout_toRightOf="@id/iv_blood_pressure"
+            android:text="@string/blood_pressure"
+            android:textColor="@color/txt_color"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/tv_blood_pressure_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_15"
+            android:layout_marginTop="37dp"
+            android:layout_toRightOf="@id/iv_blood_pressure"
+            android:text=""
+            android:textColor="@color/hint_color"
+            android:textSize="11dp" />
+
+        <TextView
+            android:id="@+id/tv_blood_pressure_second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/second"
+            android:textColor="@color/hint_color"
+            android:textSize="11dp" />
+
+        <TextView
+            android:id="@+id/tv_blood_pressure_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/tv_blood_pressure_second"
+            android:text="0"
+            android:textColor="@color/txt_color"
+            android:textSize="24dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/btn_gray_bord_shape"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_sleep"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/home_sleep" />
+
+
+        <TextView
+            android:id="@+id/tv_sleep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_15"
+            android:layout_marginTop="13dp"
+            android:layout_toRightOf="@id/iv_sleep"
+            android:gravity="center_vertical"
+            android:text="@string/sleep"
+            android:textColor="@color/txt_color"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/tv_sleep_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_15"
+            android:layout_marginTop="37dp"
+            android:layout_toRightOf="@id/iv_sleep"
+            android:text="10:10"
+            android:textColor="@color/hint_color"
+            android:textSize="11dp" />
+
+
+        <TextView
+            android:id="@+id/tv_minute"
+            android:layout_width="wrap_content"
+            android:layout_height="23dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="bottom"
+            android:text="@string/minute"
+            android:textColor="@color/hint_color"
+            android:textSize="11dp" />
+
+        <TextView
+            android:id="@+id/tv_minute_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/tv_minute"
+            android:text="123456"
+            android:textColor="@color/txt_color"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/tv_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="23dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/tv_minute_num"
+            android:gravity="bottom"
+            android:text="@string/hour"
+            android:textColor="@color/hint_color"
+            android:textSize="11dp" />
+
+        <TextView
+            android:id="@+id/tv_hour_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/tv_hour"
+            android:textColor="@color/txt_color"
+            android:textSize="24dp" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appWhite"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/appWhite">
+
+        <TextView
+            android:id="@+id/tv_Left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:gravity="center_vertical"
+            android:text="@string/cancel"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_error_code"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/toast_bag"
+        android:gravity="center"
+        android:text="@string/error_code"
+        android:textColor="@color/appWhite"
+        android:textSize="17dp"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp">
+
+        <TextView
+            android:id="@+id/tv_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/account"
+            android:textColor="@color/appColor"
+            android:textSize="15dp" />
+
+        <LinearLayout
+            android:id="@+id/ll_account_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_account"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_account"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/hint_input_account"
+                android:inputType="phone"
+                android:textColor="@color/txt_color"
+                android:textColorHint="@color/hint_color"
+                android:textSize="15dp" />
+
+            <ImageView
+                android:id="@+id/img_account_del"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@mipmap/add2" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/tv_account_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/ll_account_edit"
+            android:background="@color/line_color" />
+
+        <TextView
+            android:id="@+id/tv_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_account_line"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/code"
+            android:textColor="@color/appColor"
+            android:textSize="15dp" />
+
+        <LinearLayout
+            android:id="@+id/ll_code_deit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_code"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_code"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/hint_input_get_code"
+                android:inputType="number"
+                android:textColor="@color/txt_color"
+                android:textColorHint="@color/hint_color"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/tv_get_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/get_code"
+                android:textColor="@color/appColor"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/tv_code_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/ll_code_deit"
+            android:background="@color/line_color" />
+
+        <TextView
+            android:id="@+id/tv_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_code_line"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/pass"
+            android:textColor="@color/appColor"
+            android:textSize="15dp" />
+
+        <LinearLayout
+            android:id="@+id/ll_pass_deit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_pass"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="@string/hint_input_password"
+                android:inputType="textPassword"
+                android:textColor="@color/txt_color"
+                android:textSize="15dp" />
+
+            <ImageView
+                android:id="@+id/img_see_pass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/tv_pass_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/ll_pass_deit"
+            android:background="@color/line_color" />
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@id/tv_pass_line"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/btn_gray_shape"
+            android:gravity="center"
+            android:text="@string/confirm"
+            android:textColor="@color/appWhite"
+            android:textSize="17dp" />
+
+        <TextView
+            android:id="@+id/tv_hint_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_confirm"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:text="@string/hint_be_account"
+            android:textColor="@color/txt_color"
+            android:textSize="15dp"
+            android:visibility="invisible" />
+    </RelativeLayout>
+</LinearLayout>

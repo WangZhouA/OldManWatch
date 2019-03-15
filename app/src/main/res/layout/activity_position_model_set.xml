@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_position_toobars" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/working_mode"
+        android:textColor="@color/hint_color"
+        android:textSize="13dp" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color" />
+
+        <RadioButton
+            android:id="@+id/rd_normal"
+            style="@style/button_model_style"
+            android:drawableRight="@drawable/position_model_drawable_selector"
+            android:text="@string/normal_mode" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color" />
+
+        <RadioButton
+            android:id="@+id/rd_power_saving"
+            style="@style/button_model_style"
+            android:drawableRight="@drawable/position_model_drawable_selector"
+            android:text="@string/power_saving_mode" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color" />
+
+        <RadioButton
+            android:id="@+id/rd_following"
+            style="@style/button_model_style"
+            android:drawableRight="@drawable/position_model_drawable_selector"
+            android:text="@string/following_pattern" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/situational_mode"
+        android:textColor="@color/hint_color"
+        android:textSize="13dp" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color" />
+
+        <RadioButton
+            android:id="@+id/rd_ring_bell"
+            style="@style/button_model_style"
+            android:drawableRight="@drawable/position_model_drawable_selector"
+            android:text="@string/ring_bell" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color" />
+
+        <RadioButton
+            android:id="@+id/rd_ring_bell_and_shock"
+            style="@style/button_model_style"
+            android:drawableRight="@drawable/position_model_drawable_selector"
+            android:text="@string/ring_bell_and_shock" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color" />
+
+        <RadioButton
+            android:id="@+id/rd_shock"
+            style="@style/button_model_style"
+            android:drawableRight="@drawable/position_model_drawable_selector"
+            android:text="@string/shock" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color" />
+
+        <RadioButton
+            android:id="@+id/rd_Mute"
+            style="@style/button_model_style"
+            android:drawableRight="@drawable/position_model_drawable_selector"
+            android:text="@string/Mute" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_color" />
+    </RadioGroup>
+</LinearLayout>

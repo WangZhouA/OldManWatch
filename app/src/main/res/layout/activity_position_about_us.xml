@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_position_toobars" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_420">
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/logo" />
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color" />
+
+    <TextView
+        android:id="@+id/tv_permit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/appWhite"
+        android:drawableRight="@mipmap/right"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/installation_permit"
+        android:textColor="@color/txt_color"
+        android:textSize="15dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color" />
+
+    <TextView
+        android:id="@+id/tv_problem"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/appWhite"
+        android:drawableRight="@mipmap/right"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/common_problem"
+        android:textColor="@color/txt_color"
+        android:textSize="15dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/appWhite"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="10dp"
+            android:text="@string/contact_us"
+            android:textColor="@color/txt_color"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/tv_tel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:paddingRight="10dp"
+            android:text="400-5556-566"
+            android:textColor="@color/txt_color"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_color" />
+</LinearLayout>

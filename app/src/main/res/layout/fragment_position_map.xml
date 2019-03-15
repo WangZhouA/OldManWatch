@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rv_title"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/appColor_position"
+        android:gravity="center_vertical">
+
+        <com.saiyi.oldmanwatch.view.CircleImageView
+            android:id="@+id/civ_pic"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:src="@mipmap/devices_type_position" />
+
+        <TextView
+            android:id="@+id/tv_BarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/relation"
+            android:textColor="@color/appWhite"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/tv_BarRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/px_20"
+            android:gravity="center"
+            android:textColor="@color/appWhite"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/bmapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rv_title" />
+
+    <ImageView
+        android:id="@+id/iv_real_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/rv_title"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="25dp"
+        android:src="@mipmap/positioning_real_time" />
+
+    <ImageView
+        android:id="@+id/iv_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/iv_real_time"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="17dp"
+        android:src="@mipmap/positioning_map" />
+
+    <ImageView
+        android:id="@+id/iv_enclosure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/iv_map"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="17dp"
+        android:src="@mipmap/positioning_electronic_fence" />
+
+    <ImageView
+        android:id="@+id/iv_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="15dp"
+        android:src="@mipmap/positioning_iphone1" />
+
+    <ImageView
+        android:id="@+id/iv_trajectory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/iv_phone"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="15dp"
+        android:src="@mipmap/positioning_trajectory1" />
+
+    <ImageView
+        android:id="@+id/positioning_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="15dp"
+        android:src="@mipmap/positioning_shart" />
+
+    <ImageView
+        android:id="@+id/iv_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/positioning_share"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="15dp"
+        android:src="@mipmap/positioning_foot" />
+</RelativeLayout>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="186dp"
+                android:background="@color/appColor"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/civ_pic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="30dp"
+                    android:src="@mipmap/back"
+                    custom:layout_constraintLeft_toLeftOf="parent"
+                    custom:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_body_weight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/appWhite"
+                    android:textSize="@dimen/dp_20"
+                    custom:layout_constraintBottom_toBottomOf="parent"
+                    custom:layout_constraintLeft_toLeftOf="parent"
+                    custom:layout_constraintRight_toRightOf="parent"
+                    custom:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_use_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginRight="15dp"
+                    android:drawableRight="@mipmap/into"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/appWhite"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:visibility="gone"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/catty"
+                    android:textColor="@color/appWhite"
+                    custom:layout_constraintBottom_toBottomOf="@+id/tv_body_weight"
+                    custom:layout_constraintLeft_toRightOf="@id/tv_body_weight" />
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="- -"
+                    android:textColor="@color/appWhite"
+                    custom:layout_constraintLeft_toLeftOf="parent"
+                    custom:layout_constraintRight_toRightOf="parent"
+                    custom:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:text="@string/body_score"
+                    android:textColor="@color/appWhite"
+                    custom:layout_constraintBottom_toBottomOf="parent"
+                    custom:layout_constraintLeft_toLeftOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_body_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="O"
+                    android:textColor="@color/appWhite"
+                    custom:layout_constraintBottom_toTopOf="@id/tv_score"
+                    custom:layout_constraintLeft_toLeftOf="@id/tv_score"
+                    custom:layout_constraintRight_toRightOf="@id/tv_score" />
+
+                <TextView
+                    android:id="@+id/tv_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:text="@string/body_type"
+                    android:textColor="@color/appWhite"
+                    custom:layout_constraintBottom_toBottomOf="parent"
+                    custom:layout_constraintRight_toRightOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_body_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/appWhite"
+                    android:textSize="@dimen/dp_20"
+                    custom:layout_constraintBottom_toTopOf="@id/tv_type"
+                    custom:layout_constraintLeft_toLeftOf="@id/tv_type"
+                    custom:layout_constraintRight_toRightOf="@id/tv_type" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/appWhite"
+                android:padding="@dimen/dp_10" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+
+
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_left"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/left" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2018-08-28"
+                android:textColor="@color/txt_color"
+                android:textSize="18dp" />
+
+            <ImageView
+                android:id="@+id/iv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:src="@mipmap/date" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_right"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/right" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <com.saiyi.oldmanwatch.view.DHealthyProgressView
+        android:id="@+id/simple"
+        android:layout_width="166dp"
+        android:layout_height="166dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        custom:base_color="#50000000"
+        custom:duration="1000"
+        custom:max="100"
+        custom:min="0"
+        custom:progress_color="@color/appColor"
+        custom:progress_stroke_width="10dp">
+
+        <LinearLayout
+            android:id="@+id/ll_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_hour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8"
+                android:textColor="@color/appColor"
+                android:textSize="34dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hour"
+                android:textColor="@color/hint_color"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/tv_minute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="34"
+                android:textColor="@color/appColor"
+                android:textSize="34dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/minute"
+                android:textColor="@color/hint_color"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_last_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_time"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="6dp"
+            android:text="@string/last_test_data"
+            android:textColor="@color/hint_color"
+            android:textSize="14dp" />
+    </com.saiyi.oldmanwatch.view.DHealthyProgressView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="21dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right"
+            android:orientation="horizontal">
+
+            <com.saiyi.oldmanwatch.view.CircleImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@color/appColor" />
+
+            <TextView
+                android:id="@+id/tv_sleep_soundly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="浅睡:3小时24分"
+                android:textColor="@color/hint_color"
+                android:textSize="11dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="21dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.saiyi.oldmanwatch.view.CircleImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@color/sleep_color" />
+
+            <TextView
+                android:id="@+id/tv_shallow_sleep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="深睡:3小时24分"
+                android:textColor="@color/hint_color"
+                android:textSize="11dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/barchart"
+        android:layout_width="match_parent"
+        android:layout_height="250dp" />
+
+</LinearLayout>
